@@ -6,10 +6,12 @@ namespace Matbank.ViewModels
 {
     public class ShellViewModel: Screen
     {
-
         public ShellViewModel()
         {
-            Items.Add(new ItemModel {  });
+            // Dummy data
+            Items.Add(new ItemModel { Name = "Cimento 50kg", Description = "Cimento ensacado para entrega" });
+            Items.Add(new ItemModel { Name = "Barra de Ferro 16mm", Description = "D = 16mm, 12m" });
+            Items.Add(new ItemModel { Name = "Parafuso A36 - 10mm", Description = "Aço: A36, D =  10mm" });
         }
 
         private string _itemName;
@@ -20,6 +22,17 @@ namespace Matbank.ViewModels
             {
                 _itemName = value;
                 NotifyOfPropertyChange(() => ItemName);
+            }
+        }
+
+        private string _itemDescription;
+        public string ItemDescription
+        {
+            get { return _itemDescription; }
+            set
+            {
+                _itemDescription = value;
+                NotifyOfPropertyChange(() => _itemDescription);
             }
         }
 

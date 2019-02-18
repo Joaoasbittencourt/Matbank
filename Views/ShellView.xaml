@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="ShellView" Height="450" Width="800">
     <Grid>
-        
+        <TextBox x:Name="ItemName" HorizontalAlignment="Left" Height="23" Margin="30,60,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+
     </Grid>
 </Window>

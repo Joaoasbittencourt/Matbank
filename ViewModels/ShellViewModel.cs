@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Matbank.ViewModels
 {
-    public class ShellViewModel: Screen
+    public class ShellViewModel: Conductor<IScreen>
     {
         public ShellViewModel()
         {

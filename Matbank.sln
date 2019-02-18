@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28606.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matbank", "Matbank.csproj", "{66C905B3-9572-4893-B2E4-E32AA5A2934E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66C905B3-9572-4893-B2E4-E32AA5A2934E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66C905B3-9572-4893-B2E4-E32AA5A2934E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66C905B3-9572-4893-B2E4-E32AA5A2934E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66C905B3-9572-4893-B2E4-E32AA5A2934E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0AD0D0C6-2B98-405C-8CF5-44C3BD133FCB}
+	EndGlobalSection
+EndGlobal

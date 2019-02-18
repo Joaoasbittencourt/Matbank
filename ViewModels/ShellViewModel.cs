@@ -1,5 +1,6 @@
 ﻿using Caliburn.Micro;
 using Matbank.Models;
+using System;
 using System.Collections.Generic;
 
 namespace Matbank.ViewModels
@@ -14,6 +15,11 @@ namespace Matbank.ViewModels
             Items.Add(new ItemModel { Name = "Parafuso A36 - 10mm", Description = "Aço: A36, D =  10mm" });
         }
 
+        public bool CanAddItem
+        {
+            get { return !string.IsNullOrEmpty(ItemName); }
+        }
+
         private string _itemName;
         public string ItemName
         {
@@ -22,6 +28,7 @@ namespace Matbank.ViewModels
             {
                 _itemName = value;
                 NotifyOfPropertyChange(() => ItemName);
+                NotifyOfPropertyChange(() => CanAddItem);
             }
         }
 
@@ -32,7 +39,7 @@ namespace Matbank.ViewModels
             set
             {
                 _itemDescription = value;
-                NotifyOfPropertyChange(() => _itemDescription);
+                NotifyOfPropertyChange(() => ItemDescription);
             }
         }
 
@@ -55,5 +62,11 @@ namespace Matbank.ViewModels
             }
         }
 
+        public void AddItem()
+        {
+            Items.Add(new ItemModel { Name = ItemName, Description = ItemDescription });
+            ItemName = "";
+            ItemDescription = "";
+        }
     }
 }

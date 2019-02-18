@@ -20,6 +20,11 @@ namespace Matbank.ViewModels
             get { return !string.IsNullOrEmpty(ItemName); }
         }
 
+        public bool CanDeleteItem
+        {
+            get { return Items.Contains(SelectedItem); }
+        }
+
         private string _itemName;
         public string ItemName
         {
@@ -47,7 +52,11 @@ namespace Matbank.ViewModels
         public BindableCollection<ItemModel> Items
         {
             get { return _items; }
-            set { _items = value; }
+            set
+            {
+                _items = value;
+                NotifyOfPropertyChange(() => CanDeleteItem);
+            }
         }
 
         private ItemModel _selectedItem;
@@ -67,6 +76,11 @@ namespace Matbank.ViewModels
             Items.Add(new ItemModel { Name = ItemName, Description = ItemDescription });
             ItemName = "";
             ItemDescription = "";
+        }
+
+        public void RemoveItem()
+        {
+            Items.Remove(SelectedItem);
         }
     }
 }

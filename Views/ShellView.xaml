@@ -9,15 +9,13 @@
     <Grid Margin="0,0,2,-1">
         <TextBox x:Name="ItemName" HorizontalAlignment="Left" Height="23" Margin="20,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
         <ListBox DisplayMemberPath="Name" SelectedItem="{Binding Path=SelectedItem, Mode=OneWayToSource}" x:Name="Items" HorizontalAlignment="Left" Height="250" Margin="260,60,0,0" VerticalAlignment="Top" Width="450"/>
-        <Button x:Name="AddItem" Content="Adicionar" HorizontalAlignment="Left" Margin="20,290,0,0" VerticalAlignment="Top" Width="80"/>
-        <RichTextBox x:Name="ItemDescription" HorizontalAlignment="Left" Height="145" Margin="20,125,0,0" VerticalAlignment="Top" Width="220">
-            <FlowDocument>
-                <Paragraph/>
-            </FlowDocument>
-        </RichTextBox>
+        <Button x:Name="AddItem" Content="Adicionar" HorizontalAlignment="Left" Margin="20,195,0,0" VerticalAlignment="Top" Width="80"/>
+        <TextBox x:Name="ItemDescription" HorizontalAlignment="Left" Height="55" Margin="20,125,0,0" VerticalAlignment="Top" Width="220">
+        </TextBox>
         <TextBlock HorizontalAlignment="Left" Margin="20,39,0,0" TextWrapping="Wrap" Text="Nome do Item" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="20,104,0,0" TextWrapping="Wrap" Text="Descrição" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="260,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Items"/><LineBreak/><Run/></TextBlock>
+        <Button x:Name="DeleteItem" Content="Remover Item" HorizontalAlignment="Left" Margin="145,195,0,0" VerticalAlignment="Top" Width="95"/>
 
     </Grid>
 </Window>
